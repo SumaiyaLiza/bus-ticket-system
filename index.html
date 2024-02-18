@@ -541,34 +541,34 @@
                                 </div>
                                 
                                 <div class="mt-20 inter-2">
-                                    <form>
+                                    <form id="booking-form">
                                         <div class="mt-1">
                                             <label for="passengerName"
                                                 class="block text-xl inter-1 font-bold text-gray-700">Passenger
                                                 Name</label>
                                             <input type="text" name="passengerName" id="passengerName"
                                                 class="mt-1 block w-full rounded-md sm:text-sm border-gray-300 border-2 p-[18px]"
-                                                placeholder="Enter Your Name">
+                                                placeholder="Enter Your Name" required>
                                         </div>
                                         <div class="mt-4">
                                             <label for="phoneNumber" class="block text-xl font-bold text-gray-700">Phone
                                                 Number</label>
                                             <input type="tel" name="phoneNumber" id="phoneNumber"
                                                 class="mt-1 block w-full p-[18px] rounded-lg sm:text-sm border-gray-300 border-2"
-                                                placeholder="Enter Your Phone Number">
+                                                placeholder="Enter Your Phone Number" required>
                                         </div>
                                         <div class="mt-4">
                                             <label for="email"
-                                                class="block text-xl inter-2 font-bold text-gray-700">Email
+                                                class="block text-xl inter-2 font-bold text-gray-700 required:">Email
                                                 ID</label>
                                             <input type="email" name="email" id="email"
                                                 class="mt-1 block w-full p-[18px] rounded-lg sm:text-sm border-gray-300 border-2"
-                                                placeholder="Enter Your Email">
+                                                placeholder="Enter Your Email" required>
                                         </div>
-                                        <div class="mt-4">
-                                            <button type=""
-                                                class="btn justify-center rounded-lg text-sm font-medium text-white bg-[#1DD100] py-2 px-4 w-full">Next</button>
-                                        </div>
+                                       
+                                            <div class="mt-4">
+                                                <button type="" id="nextBtn" class="btn justify-center rounded-lg text-sm font-medium text-white bg-[#1DD100] py-2 px-4 w-full">Next</button>
+                                            </div>
 
                                     </form>
 
@@ -639,7 +639,7 @@
         </div>
 
 
-        <div class="mt-20 flex justify-center items-center mb-72 hidden">
+        <div id="confirm" class="mt-20 flex justify-center items-center mb-72 hidden">
 
             <div class="bg-[#FFFFFF] border-2 rounded-lg p-8">
                 <div>
