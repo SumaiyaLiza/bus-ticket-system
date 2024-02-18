@@ -49,16 +49,42 @@ seatButtons.forEach(btn => {
 
 function updateTotalPrice() {
     const seatCount = parseInt(document.querySelector('.seat-count').textContent);
-    const seatPrice = 550; // Assuming the price per seat is 550 BDT
+    const seatPrice = 550; // 
     const totalPrice = seatCount * seatPrice;
-    document.querySelector('.total-price').textContent = totalPrice + ' '+ 'BDT ' ;
+    document.querySelector('.total-price').textContent = totalPrice + ' BDT'; // Removed extra space
+    return totalPrice; 
 }
 
 updateTotalPrice();
 
 document.querySelector('.seat-count').addEventListener('DOMSubtreeModified', updateTotalPrice);
 
+document.getElementById('applyCouponBtn').addEventListener('click', function() {
+    const couponInput = document.getElementById('couponInput').value.trim(); 
+    let grandTotal = updateTotalPrice(); 
+    let errorMessage = ''; 
 
+    // Applying coupon logic
+    if (couponInput === 'New15') {
+        grandTotal *= 0.85; 
+    } else if (couponInput === 'Couple 20') {
+        grandTotal *= 0.80; 
+    } else {
+        errorMessage = 'Invalid coupon code'; 
+    }
+
+    const grandTotalLabel = document.getElementById('grandTotalLabel');
+    const grandTotalValue = document.getElementById('grandTotalValue');
+    if (errorMessage === '') {
+        grandTotalValue.textContent = 'BDT ' + grandTotal.toFixed(2);
+        grandTotalLabel.classList.remove('hidden');
+        grandTotalValue.classList.remove('hidden');
+    } else {
+        grandTotalLabel.classList.add('hidden');
+        grandTotalValue.classList.add('hidden');
+        alert(errorMessage); 
+    }
+});
 
 
 

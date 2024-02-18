@@ -531,17 +531,15 @@
                             </div>
                             <div class="mt-4 w-[400px] ml-1">
                                 <div class="mt-1 flex rounded-md shadow-sm">
-                                    <input type="text" name="coupon" id="coupon"
-                                        class="flex-1 block md:w-96 rounded-l-md sm:text-sm border-gray-300"
-                                        placeholder=" Have any coupon?">
-                                    <button type="button"
-                                        class=" btn justify-center rounded-r-md text-sm font-medium text-white bg-[#1DD100]">Apply</button>
+                                    <input type="text" name="coupon" id="couponInput" class="flex-1 block md:w-96 rounded-l-md sm:text-sm border-gray-300" placeholder="Have any coupon?">
+                                    <button type="button" id="applyCouponBtn" class="btn justify-center rounded-r-md text-sm font-medium text-white bg-[#1DD100]">Apply</button>
                                 </div>
-
+                                
                                 <div class="flex flex-row justify-between mt-2 inter-2">
-                                    <a href=""> Grand Total</a>
-                                    <a href="" class="hidden">BDT 1150</a>
+                                    <a href="#" id="grandTotalLabel">Grand Total</a>
+                                    <a href="#" id="grandTotalValue" class="hidden">BDT 1150</a>
                                 </div>
+                                
                                 <div class="mt-20 inter-2">
                                     <form>
                                         <div class="mt-1">
