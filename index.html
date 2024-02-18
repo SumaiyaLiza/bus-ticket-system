@@ -22,6 +22,12 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
     <!-- Custom CSS -->
 
     <style>
@@ -78,6 +84,24 @@
             font-weight: 500;
 
         }
+
+        .roboto {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .roboto-2 {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .roboto-3 {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
     </style>
 
 </head>
@@ -96,10 +120,10 @@
                     <a href="#" class=" mx-2 text-xl">Destination</a>
                     <a href="#" class=" mx-2 text-xl">Search</a>
                 </div>
-                <div class=" px-2 flex-none">
+                <div class="flex-none">
                     <button class="btn w-[100px] border-[#1DD100] text-2xl flex flex-col bg-[#1DD1001A] text-[#1DD100]">
                         Bus
-                        <img src="images/bus-icon.png" alt="">
+                        <img class="mt-2" src="images/bus-icon.png" alt="">
                     </button>
                 </div>
             </div>
@@ -166,46 +190,43 @@
         <!-- Offer -->
         <div class="container mx-auto lg:pt-24 px-8 my-8">
             <h1 class="text-4xl mb-10 font-bold text-center">
-              Best offers for you
+                Best offers for you
             </h1>
             <div class="flex justify-evenly">
-              <div
-                class="flex justify-evenly items-center h-56 w-[45%] rounded-xl bg-[#FFBF0F]"
-              >
-                <div class="text-left">
-                  <h1 class="font-black text-5xl">15% OFF</h1>
-                  <p class="inter-1 font-bold">on your next purchase</p>
-                  <p class="inter-1">use by February 2024</p>
+                <div class="flex justify-evenly items-center h-56 w-[45%] rounded-xl bg-[#FFBF0F]">
+                    <div class="text-left">
+                        <h1 class="font-black text-5xl">15% OFF</h1>
+                        <p class="inter-1 font-bold">on your next purchase</p>
+                        <p class="inter-1">use by February 2024</p>
+                    </div>
+                    <div><img src="images/cupon-devider.png" alt="" /></div>
+                    <div class="font-raleway text-left">
+                        <h1 class="font-bold text-4xl raleway">NEW15</h1>
+                        <p class="text-[#03071266] inter-1">Coupon Code</p>
+                    </div>
                 </div>
-                <div><img src="images/cupon-devider.png" alt="" /></div>
-                <div class="font-raleway text-left">
-                  <h1 class="font-bold text-4xl raleway">NEW15</h1>
-                  <p class="text-[#03071266] inter-1">Coupon Code</p>
+                <div class="flex justify-evenly items-center h-56 w-[45%] rounded-xl bg-[#F78C9C]">
+                    <div class="text-left">
+                        <h1 class="inter font-black text-5xl">20% OFF</h1>
+                        <p class="inter-1 font-bold">on your next purchase</p>
+                        <p>use by February 2024</p>
+                    </div>
+                    <div><img src="images/cupon-devider.png" alt="" /></div>
+                    <div class="font-raleway text-center">
+                        <h1 class="font-bold text-4xl raleway">Couple 20</h1>
+                        <p class="text-[#03071266] inter-1">Coupon Code</p>
+                    </div>
                 </div>
-              </div>
-              <div
-                class="flex justify-evenly items-center h-56 w-[45%] rounded-xl bg-[#F78C9C]"
-              >
-                <div class="text-left">
-                  <h1 class="inter font-black text-5xl">20% OFF</h1>
-                  <p class="inter-1 font-bold">on your next purchase</p>
-                  <p>use by February 2024</p>
-                </div>
-                <div><img src="images/cupon-devider.png" alt="" /></div>
-                <div class="font-raleway text-center">
-                  <h1 class="font-bold text-4xl raleway">Couple 20</h1>
-                  <p class="text-[#03071266] inter-1">Coupon Code</p>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="mb-10 w-40 mx-auto">
-            <button class="btn border-[#1DD100] mt-4 raleway w-[150px] font-semibold text-[#1DD100] font-bold ">See All Offers </button>
-          </div>
+        </div>
+        <div class="mb-10 w-40 mx-auto">
+            <button class="btn border-[#1DD100] mt-4 raleway w-[150px] font-semibold text-[#1DD100] font-bold ">See All
+                Offers </button>
+        </div>
 
     </header>
- 
-    <main class="bg-[#F7F8F8]  ">
+
+    <main class="bg-[#F7F8F8]">
         <div class="bg-[#F7F8F8] border-none ">
             <div class="text-center pt-24">
                 <h1 class="font-raleway text-4xl font-bold">Bus Paribahan</h1>
@@ -213,7 +234,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Est?
                 </p>
             </div>
-        
+
             <div class="flex bg-white rounded-2xl items-center justify-between container mx-auto lg:px-24 px-8 my-8">
                 <div class="p-10 rounded-2xl">
                     <div class="flex gap-12 justify-between items-center">
@@ -243,7 +264,7 @@
                         </div>
                         <hr class="mt-5 dashed-line" />
                     </div>
-        
+
                     <div class="flex mt-6 justify-around">
                         <p class="btn">Boarding Point - Laxmipur</p>
                         <p class="btn">Dropping Point - Bogura</p>
@@ -260,236 +281,293 @@
                 </div>
             </div>
         </div>
-        
-        
+
+
 
         <!-- select Seat -->
-         <div class="border-2 bg-white rounded-3xl  p-5 mt-6 ml-48 mr-48 mb-7" > 
-            
-        <div>
-            <div class=" flex flex-col justify-start items-start w-[1200px] ml-36 ">
-                <div>
-                    <h1 class="raleway-5 text-xl mb-5">Select Your Seat</h1>
-                    <div
-                        class="border-dashed border-gray-400 border border-solid border-opacity-50 border-1 w-[500px] mb-5 ">
-                    </div>
-                </div>
+        <div class="border-2 bg-white rounded-3xl  p-5 mt-6 ml-48 mr-48 mb-7">
 
-                <div>
-                    <div class="flex flex-row justify-between w-[500px]">
-                        <div class="flex flex-row ml-4">
-                            <img src="images/seat-gray.png" alt="">
-                            <div>
-                                <p class="inter-2">Available</p>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-row">
-                            <img src="images/seat-green-filled.png" alt="">
-                            <div>
-                                <p class="inter-2">Selected</p>
-                            </div>
+            <div>
+                <div class=" flex flex-col justify-start items-start w-[1200px] ml-36 ">
+                    <div>
+                        <h1 class="raleway-5 text-xl mb-5">Select Your Seat</h1>
+                        <div
+                            class="border-dashed border-gray-400 border border-solid border-opacity-50 border-1 w-[500px] mb-5 ">
                         </div>
                     </div>
 
-                    <div
-                        class="border-dashed border-gray-400 border border-solid border-opacity-50 border-1 mt-5 w-[500px] ">
+                    <div>
+                        <div class="flex flex-row justify-between w-[500px]">
+                            <div class="flex flex-row ml-4">
+                                <img src="images/seat-gray.png" alt="">
+                                <div>
+                                    <p class="inter-2">Available</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-row">
+                                <img src="images/seat-green-filled.png" alt="">
+                                <div>
+                                    <p class="inter-2">Selected</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="border-dashed border-gray-400 border border-solid border-opacity-50 border-1 mt-5 w-[500px] ">
+                        </div>
                     </div>
-                </div>
-                <div class="flex justify-end w-[550px]">
-                    <img class="border-2 bg-gray-100 rounded-md w-[60px] pl-[15px] pr-[15px] pt-[5px]
-                    pb-[5px] mt-7"
-                        src="images/download.png" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- Seat -->
-        <div>
-        <div class="flex flex-row ">
-            <div class="flex justify-center w-[1200px] items-center p-8">
-                <div>
-                    <div class="flex justify-center items-center">
-                        
-                        <div class="w-[500px] mr-[-600px]">
-                        
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap justify-center gap-4">
-
-                    </div>
-                    <div class="flex flex-col gap-6 inter-2">
-
-                        <!-- Section A -->
-                        <div class="flex gap-6 items-center">
-                            <div class="flex justify-center items-center gap-10">
-                                <div class="flex justify-center items-center">A</div>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">A1</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">A2</button>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">A3</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">A4</button>
-                            </div>
-                        </div>
-                        <!-- Section B -->
-                        <div class="flex gap-6 items-center">
-                            <div class="flex justify-center items-center gap-10">
-                                <div class="flex justify-center items-center">B</div>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">B1</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">B2</button>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">B3</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">B4</button>
-                            </div>
-                        </div>
-                        <!-- Section C -->
-                        <div class="flex gap-6 items-center">
-                            <div class="flex justify-center items-center gap-10">
-                                <div class="flex justify-center items-center">C</div>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">C1</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">C2</button>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">C3</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">C4</button>
-                            </div>
-                        </div>
-                        <!-- Section D -->
-                        <div class="flex gap-6 items-center">
-                            <div class="flex justify-center items-center gap-10">
-                                <div class="flex justify-center items-center">D</div>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">D1</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">D2</button>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">D3</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">D4</button>
-                            </div>
-                        </div>
-                        <!-- Section E -->
-                        <div class="flex gap-6 items-center">
-                            <div class="flex justify-center items-center gap-10">
-                                <div class="flex justify-center items-center">E</div>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">E1</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">E2</button>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">E3</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">E4</button>
-                            </div>
-                        </div>
-                        <!-- Section F -->
-                        <div class="flex gap-6 items-center">
-                            <div class="flex justify-center items-center gap-10">
-                                <div class="flex justify-center items-center">F</div>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">F1</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">F2</button>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">F3</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">F4</button>
-                            </div>
-                        </div>
-                        <!-- Section G -->
-                        <div class="flex gap-6 items-center">
-                            <div class="flex justify-center items-center gap-10">
-                                <div class="flex justify-center items-center">G</div>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">G1</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">G2</button>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">G3</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">G4</button>
-                            </div>
-                        </div>
-                        <!-- Section H -->
-                        <div class="flex gap-6 items-center">
-                            <div class="flex justify-center items-center gap-10">
-                                <div class="flex justify-center items-center">H</div>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">H1</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">H2</button>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">H3</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">H4</button>
-                            </div>
-                        </div>
-                        <!-- Section I -->
-                        <div class="flex gap-6 items-center">
-                            <div class="flex justify-center items-center gap-10 ml-2">
-                                <div class="flex justify-center items-center">I</div>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">I1</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">I2</button>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">I3</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">I4</button>
-                            </div>
-                        </div>
-
-                        <div class="flex gap-6 items-center">
-                            <div class="flex justify-center items-center gap-10">
-                                <div class="flex justify-center items-center">J</div>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">J1</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">J2</button>
-                                <button class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">J3</button>
-                                <button class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">J4</button>
-                            </div>
-                        </div>
-
+                    <div class="flex justify-end w-[550px]">
+                        <img class="border-2 bg-gray-100 rounded-md w-[60px] pl-[15px] pr-[15px] pt-[5px]
+                    pb-[5px] mt-7" src="images/download.png" alt="">
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col border-2 bg-gray-50 rounded-lg h-[350px] pl-9">
-                <div class="mt-9">
-                    <div class="grid grid-cols-3 w-[500px]">
-                        <div class="flex flex-col">
-                            <a href="#" class="inter-2">Seat <span class="text-white border-2 bg-[#1DD100] pl-2 pr-2 border-none rounded-md w-[1px]">2</span></a>
-                            <div class="border-t border-dashed border-gray-400 w-[400px] mt-2"></div>
-                            <a href="#" class="inter-1 mt-3">C2</a>
-                            <a href="#" class="inter-1 mt-3">C2</a>
-                            <div class="border-t border border-gray-300 w-[400px] mt-2"></div>
-                            <a href="#" class="inter-2 mt-1">Total Price</a>
+            <!-- Seat -->
+            <div>
+                <div class="flex flex-row ">
+                    <div class="flex justify-center w-[1200px] items-center p-8">
+                        <div>
+                            <div class="flex justify-center items-center">
+
+                                <div class="w-[500px] mr-[-600px]">
+
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap justify-center gap-4">
+
+                            </div>
+                            <div class="flex flex-col gap-6 inter-2">
+
+                                <!-- Section A -->
+                                <div class="flex gap-6 items-center">
+                                    <div class="flex justify-center items-center gap-10">
+                                        <div class="flex justify-center items-center">A</div>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">A1</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">A2</button>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">A3</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">A4</button>
+                                    </div>
+                                </div>
+                                <!-- Section B -->
+                                <div class="flex gap-6 items-center">
+                                    <div class="flex justify-center items-center gap-10">
+                                        <div class="flex justify-center items-center">B</div>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">B1</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">B2</button>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">B3</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">B4</button>
+                                    </div>
+                                </div>
+                                <!-- Section C -->
+                                <div class="flex gap-6 items-center">
+                                    <div class="flex justify-center items-center gap-10">
+                                        <div class="flex justify-center items-center">C</div>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">C1</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">C2</button>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">C3</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">C4</button>
+                                    </div>
+                                </div>
+                                <!-- Section D -->
+                                <div class="flex gap-6 items-center">
+                                    <div class="flex justify-center items-center gap-10">
+                                        <div class="flex justify-center items-center">D</div>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">D1</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">D2</button>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">D3</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">D4</button>
+                                    </div>
+                                </div>
+                                <!-- Section E -->
+                                <div class="flex gap-6 items-center">
+                                    <div class="flex justify-center items-center gap-10">
+                                        <div class="flex justify-center items-center">E</div>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">E1</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">E2</button>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">E3</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">E4</button>
+                                    </div>
+                                </div>
+                                <!-- Section F -->
+                                <div class="flex gap-6 items-center">
+                                    <div class="flex justify-center items-center gap-10">
+                                        <div class="flex justify-center items-center">F</div>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">F1</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">F2</button>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">F3</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">F4</button>
+                                    </div>
+                                </div>
+                                <!-- Section G -->
+                                <div class="flex gap-6 items-center">
+                                    <div class="flex justify-center items-center gap-10">
+                                        <div class="flex justify-center items-center">G</div>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">G1</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">G2</button>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">G3</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">G4</button>
+                                    </div>
+                                </div>
+                                <!-- Section H -->
+                                <div class="flex gap-6 items-center">
+                                    <div class="flex justify-center items-center gap-10">
+                                        <div class="flex justify-center items-center">H</div>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">H1</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">H2</button>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">H3</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">H4</button>
+                                    </div>
+                                </div>
+                                <!-- Section I -->
+                                <div class="flex gap-6 items-center">
+                                    <div class="flex justify-center items-center gap-10 ml-2">
+                                        <div class="flex justify-center items-center">I</div>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">I1</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">I2</button>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">I3</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">I4</button>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-6 items-center">
+                                    <div class="flex justify-center items-center gap-10">
+                                        <div class="flex justify-center items-center">J</div>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">J1</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">J2</button>
+                                        <button
+                                            class=" btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">J3</button>
+                                        <button
+                                            class="btn w-24 h-10 bg-gray-100 hover:bg-gray-200 flex justify-center items-center rounded-md">J4</button>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="flex flex-col">
-                            <a href="#" class="inter-2">Class</a>
-                            <a href="#" class="inter-1 mt-3">Economy</a>
-                            <a href="#" class="inter-1 mt-3">Economy</a>
+                    </div>
+                    <div class="flex flex-col border-2 bg-gray-50 rounded-lg h-[350px] pl-9">
+                        <div class="mt-9">
+                            <div class="grid grid-cols-3 w-[500px]">
+                                <div class="flex flex-col">
+                                    <a href="#" class="inter-2">Seat <span
+                                            class="text-white border-2 bg-[#1DD100] pl-2 pr-2 border-none rounded-md w-[1px]">2</span></a>
+                                    <div class="border-t border-dashed border-gray-400 w-[400px] mt-2"></div>
+                                    <a href="#" class="inter-1 mt-3">C2</a>
+                                    <a href="#" class="inter-1 mt-3">C2</a>
+                                    <div class="border-t border border-gray-300 w-[400px] mt-2"></div>
+                                    <a href="#" class="inter-2 mt-1">Total Price</a>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="#" class="inter-2">Class</a>
+                                    <a href="#" class="inter-1 mt-3">Economy</a>
+                                    <a href="#" class="inter-1 mt-3">Economy</a>
+                                </div>
+                                <div class="flex flex-col">
+                                    <a href="#" class="inter-2">Price</a>
+                                    <a href="#" class="inter-1 mt-3">550</a>
+                                    <a href="#" class="inter-1 mt-3">550</a>
+                                    <a href="#" class="inter-2 mt-6">BDT 1150</a>
+
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex flex-col">
-                            <a href="#" class="inter-2">Price</a>
-                            <a href="#" class="inter-1 mt-3">550</a>
-                            <a href="#" class="inter-1 mt-3">550</a>
-                            <a href="#" class="inter-2 mt-6">BDT 1150</a>
+                        <div class="mt-4 w-[400px] ml-1">
+                            <div class="mt-1 flex rounded-md shadow-sm">
+                                <input type="text" name="coupon" id="coupon"
+                                    class="flex-1 block md:w-96 rounded-l-md sm:text-sm border-gray-300"
+                                    placeholder=" Have any coupon?">
+                                <button type="button"
+                                    class=" btn justify-center rounded-r-md text-sm font-medium text-white bg-[#1DD100]">Apply</button>
+                            </div>
+
+                            <div class="flex flex-row justify-between mt-2 inter-2">
+                                <a href=""> Grand Total</a>
+                                <a href="">BDT 1150</a>
+                            </div>
+                            <div class="mt-20 inter-2">
+                                <form>
+                                    <div class="mt-1">
+                                        <label for="passengerName"
+                                            class="block text-xl inter-1 font-bold text-gray-700">Passenger Name</label>
+                                        <input type="text" name="passengerName" id="passengerName"
+                                            class="mt-1 block w-full rounded-md sm:text-sm border-gray-300 border-2 p-[18px]"
+                                            placeholder="Enter Your Name">
+                                    </div>
+                                    <div class="mt-4">
+                                        <label for="phoneNumber" class="block text-xl font-bold text-gray-700">Phone
+                                            Number</label>
+                                        <input type="tel" name="phoneNumber" id="phoneNumber"
+                                            class="mt-1 block w-full p-[18px] rounded-lg sm:text-sm border-gray-300 border-2"
+                                            placeholder="Enter Your Phone Number">
+                                    </div>
+                                    <div class="mt-4">
+                                        <label for="email" class="block text-xl inter-2 font-bold text-gray-700">Email
+                                            ID</label>
+                                        <input type="email" name="email" id="email"
+                                            class="mt-1 block w-full p-[18px] rounded-lg sm:text-sm border-gray-300 border-2"
+                                            placeholder="Enter Your Email">
+                                    </div>
+                                    <div class="mt-4">
+                                        <button type="submit"
+                                            class="btn justify-center rounded-lg text-sm font-medium text-white bg-[#1DD100] py-2 px-4 w-full">Next</button>
+                                    </div>
+                                    
+                                </form>
+                                
+
+                            </div>
+
                             
+
                         </div>
-                        </div>
-                    </div>
-                    <div class="mt-4 w-[400px] ml-1" >
-                        <div class="mt-1 flex rounded-md shadow-sm">
-                            <input type="text" name="coupon" id="coupon" class="flex-1 block md:w-96 rounded-l-md sm:text-sm border-gray-300" placeholder=" Have any coupon?">
-                            <button type="button" class=" btn justify-center rounded-r-md text-sm font-medium text-white bg-[#1DD100]">Apply</button>
-                        </div>
-                        
-                        <div class="flex flex-row justify-between mt-2 inter-2">
-                            <a href=""> Grand Total</a>
-                            <a href="">BDT 1150</a>
-                        </div>
-                        <div class="mt-20 inter-2">
-                            <form>
-                                <div class="mt-1">
-                                    <label for="passengerName" class="block text-xl inter-1 font-bold text-gray-700">Passenger Name</label>
-                                    <input type="text" name="passengerName" id="passengerName" class="mt-1 block w-full rounded-md sm:text-sm border-gray-300 border-2 p-[18px]" placeholder="Enter Your Name">
-                                </div>
-                                <div class="mt-4">
-                                    <label for="phoneNumber" class="block text-xl font-bold text-gray-700">Phone Number</label>
-                                    <input type="tel" name="phoneNumber" id="phoneNumber" class="mt-1 block w-full p-[18px] rounded-lg sm:text-sm border-gray-300 border-2" placeholder="Enter Your Phone Number">
-                                </div>
-                                <div class="mt-4">
-                                    <label for="email" class="block text-xl inter-2 font-bold text-gray-700">Email ID</label>
-                                    <input type="email" name="email" id="email" class="mt-1 block w-full p-[18px] rounded-lg sm:text-sm border-gray-300 border-2" placeholder="Enter Your Email">
-                                </div>
-                                <div class="mt-4">
-                                    <button type="submit" class="btn justify-center rounded-lg text-sm font-medium text-white bg-[#1DD100] py-2 px-4 w-full">Next</button>
-                                </div>
-                            </form>
-                            
-                        </div>
-                        
-                    </div>
                     </div>
                 </div>
             </div>
-          
-        </div>
-        
-        </div>
-    </div>
 
-</div>
+        </div>
+
+        </div>
+        </div>
+
+        </div>
 
     </main>
 
@@ -549,6 +627,25 @@
         </div>
 
 
+        <div class="mt-20 flex justify-center items-center mb-72">
+
+            <div class="bg-[#FFFFFF] border-2 rounded-lg p-8">
+                <div>
+                    <img class="ml-56" src="images/success.png" alt="">
+                    <h1 class="text-[#1DD100] text-center mt-4 roboto-3 text-xl">SUCCESS</h1>
+                </div>
+                <div>
+                    <h1 class="text-center mt-4 roboto text-xl">Thank you for Booking Our Bus Seats. <br>
+                        We are working hard to find the best service and deals for you. <br>
+                        <span class="roboto-2 text-xl"> Shortly you will find a confirmation in your email. </span>
+                    </h1>
+                </div>
+
+                <div>
+                    <button class="btn bg-[#27AE60] text-white rounded-full w-40 ml-52 mt-4 roboto text-xl"> Continue </button>
+                </div>
+            </div>
+        </div>
 
     </footer>
     <script src="script.js"></script>
