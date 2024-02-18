@@ -1,22 +1,23 @@
 
-// If i double click it will be white otherwise it will stay green by one click 
-const btns = document.querySelectorAll('.a');
+function next() {
+                   
+    const HomeScreen = document.getElementById('home-screen'); 
+    HomeScreen.classList.add('hidden'); 
 
-for (let i = 0; i < btns.length; i++) {
-  let clicked = false;
-  const btn = btns[i];
-  btn.addEventListener('click', function onClick() {
-    clicked = !clicked;
-    if (clicked) {
-      btn.style.backgroundColor = '#1DD100';
-      btn.style.color = 'white';
-    } else {
-      btn.style.backgroundColor = '';
-      btn.style.color = '';
-    }
-  });
-} 
+    const Offer = document.getElementById('seat'); 
+    Offer.classList.add('hidden'); 
 
+    const Remove = document.getElementById('remove'); 
+    Remove.classList.add('hidden'); 
+
+    const Offers = document.getElementById('offer'); 
+    Offers.classList.add('hidden');
+    const Last = document.getElementById('last'); 
+    Last.classList.add('hidden') ; 
+
+    const Confirm = document.getElementById('confirm'); 
+    Confirm.classList.remove('hidden'); 
+}
 
 // seat number,available,selected 
 const seatButtons = document.querySelectorAll('.seat-btn');
@@ -25,24 +26,35 @@ const selectedCountElement = document.querySelector('.selected-count');
 const seatCountElement = document.querySelector('.seat-count');
 
 let selectedSeats = 0;
-let availableSeats = 40; 
+let availableSeats = 40;
 
-seatButtons.forEach(btn => {
+for (let i = 0; i < seatButtons.length; i++) {
+  const btn = seatButtons[i];
   btn.addEventListener('click', function onClick() {
-    if (!btn.classList.contains('selected')) {
+    if (!btn.classList.contains('selected') && selectedSeats < 4) {
       btn.classList.add('selected');
       selectedSeats++;
       availableSeats--;
-    } else {
+      btn.style.backgroundColor = '#1DD100'; 
+      btn.style.color = 'white'; 
+    } else if (btn.classList.contains('selected')) {
       btn.classList.remove('selected');
       selectedSeats--;
       availableSeats++;
+      btn.style.backgroundColor = ''; 
+      btn.style.color = '';
     }
     availableCountElement.textContent = availableSeats + " Available";
     selectedCountElement.textContent = selectedSeats + " Selected";
     seatCountElement.textContent = selectedSeats;
   });
-});
+}
+
+
+
+
+
+
 
 
 // sum of ticket price 
@@ -86,34 +98,8 @@ document.getElementById('applyCouponBtn').addEventListener('click', function() {
     }
 });
 
-// Function to add a class
-function addClass(element, className) {
-    element.classList.add(className);
-}
 
-// Function to remove a class
-function removeClass(element, className) {
-    element.classList.remove(className);
-}
 
-document.getElementById('nextBtn').addEventListener('click', function() {
-    // Get form inputs
-    const passengerName = document.getElementById('passengerName').value;
-    const phoneNumber = document.getElementById('phoneNumber').value;
-    const email = document.getElementById('email').value;
 
-    // Check if form inputs are valid (you can add validation logic here if needed)
 
-    // Show confirmation message
-    const confirmElement = document.getElementById('confirm');
-    removeClass(confirmElement, 'hidden');
-});
-
-// If "Continue" button inside the confirmation message is clicked, hide the confirmation message
-document.getElementById('confirm').addEventListener('click', function(event) {
-    if (event.target.classList.contains('btn')) {
-        const confirmElement = document.getElementById('confirm');
-        addClass(confirmElement, 'hidden');
-    }
-});
 
