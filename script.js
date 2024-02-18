@@ -57,6 +57,20 @@ seatButtons.forEach(btn => {
 });
 
 
+// sum of ticket price 
+
+function updateTotalPrice() {
+    const seatCount = parseInt(document.querySelector('.seat-count').textContent);
+    const seatPrice = 550; // Assuming the price per seat is 550 BDT
+    const totalPrice = seatCount * seatPrice;
+    document.querySelector('.total-price').textContent = totalPrice + ' '+ 'BDT ' ;
+}
+
+updateTotalPrice();
+
+document.querySelector('.seat-count').addEventListener('DOMSubtreeModified', updateTotalPrice);
+
+
 
 
 
