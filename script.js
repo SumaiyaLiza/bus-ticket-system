@@ -9,8 +9,7 @@ function Button() {
     Seat.classList.remove('hidden');
 }
 
-//  if clicked that will be green otherwise white and two click is white and one click is green 
-
+// If i double click it will be white otherwise it will stay green by one click 
 const btns = document.querySelectorAll('.a');
 
 for (let i = 0; i < btns.length; i++) {
@@ -26,7 +25,10 @@ for (let i = 0; i < btns.length; i++) {
       btn.style.color = '';
     }
   });
-}
+} 
+
+
+
 
 // seat number,available,selected 
 const seatButtons = document.querySelectorAll('.seat-btn');
@@ -53,6 +55,9 @@ seatButtons.forEach(btn => {
     seatCountElement.textContent = selectedSeats;
   });
 });
+
+
+
 
 
 
