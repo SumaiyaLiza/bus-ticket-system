@@ -76,7 +76,7 @@ document.getElementById('applyCouponBtn').addEventListener('click', function() {
     const grandTotalLabel = document.getElementById('grandTotalLabel');
     const grandTotalValue = document.getElementById('grandTotalValue');
     if (errorMessage === '') {
-        grandTotalValue.textContent = 'BDT ' + grandTotal.toFixed(2);
+        grandTotalValue.textContent =grandTotal.toFixed(2) + 'BDT ';
         grandTotalLabel.classList.remove('hidden');
         grandTotalValue.classList.remove('hidden');
     } else {
