@@ -1,14 +1,4 @@
 
-// hide and go to the seat page 
-
-function Button() {
-    const Button = document.getElementById('home-screen');
-    Button.classList.add('hidden');
-
-    const Seat = document.getElementById('seat');
-    Seat.classList.remove('hidden');
-}
-
 // If i double click it will be white otherwise it will stay green by one click 
 const btns = document.querySelectorAll('.a');
 
@@ -26,8 +16,6 @@ for (let i = 0; i < btns.length; i++) {
     }
   });
 } 
-
-
 
 
 // seat number,available,selected 
