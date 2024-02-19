@@ -1,98 +1,122 @@
-function next() {
-                   
-  const HomeScreen = document.getElementById('home-screen'); 
-  HomeScreen.classList.add('hidden'); 
+function scrollToMainSection(){
+  const mainSection = document.getElementById('mainId');
 
-  const Offer = document.getElementById('seat'); 
-  Offer.classList.add('hidden'); 
+      // Scroll options
+      const scrollOptions = {
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+      };
 
-  const Remove = document.getElementById('remove'); 
-  Remove.classList.add('hidden'); 
-
-  const Offers = document.getElementById('offer'); 
-  Offers.classList.add('hidden');
-  const Last = document.getElementById('last'); 
-  Last.classList.add('hidden') ; 
-
-  const Confirm = document.getElementById('confirm'); 
-  Confirm.classList.remove('hidden'); 
+      // Scroll to the main section
+      mainSection.scrollIntoView(scrollOptions);
 }
 
-// seat number,available,selected 
-const seatButtons = document.querySelectorAll('.seat-btn');
-const availableCountElement = document.querySelector('.available-count');
-const selectedCountElement = document.querySelector('.selected-count');
-const seatCountElement = document.querySelector('.seat-count');
 
-let selectedSeats = 0;
-let availableSeats = 40;
+// For counting the seats 
 
-for (let i = 0; i < seatButtons.length; i++) {
-const btn = seatButtons[i];
-btn.addEventListener('click', function onClick() {
-  if (!btn.classList.contains('selected') && selectedSeats < 4) {
-    btn.classList.add('selected');
-    selectedSeats++;
-    availableSeats--;
-    btn.style.backgroundColor = '#1DD100'; 
-    btn.style.color = 'white'; 
-  } else if (btn.classList.contains('selected')) {
-    btn.classList.remove('selected');
-    selectedSeats--;
-    availableSeats++;
-    btn.style.backgroundColor = ''; 
-    btn.style.color = '';
+const allSeats = document.getElementsByClassName("addSeats");
+let count=0;
+let leftSeat=40;
+
+
+for (const seat of allSeats){
+  seat.addEventListener("click",function(e){
+    seat.classList.add('bg-green-500', 'text-white');
+      const seatData =seat.innerText;
+      count=count+1;
+      leftSeat=leftSeat-1;
+      setInnerTextById("seatCount",count);
+      setInnerTextById("leftSeatCount",leftSeat);
+      const priceTotal= 550*count;
+      setInnerTextById("total",priceTotal);
+      setInnerTextById("grandTotal",priceTotal);
+
+
+      // Coupon functionality 
+      const coupon=document.getElementById("coupon");
+      handleSeatClick(seatData);
+      if(count>3){
+          alert("You have reached the limit!");
+          disableSeats(seat);
+          coupon.removeAttribute("disabled");
+          const discountTr=document.getElementById("discountTr");
+          const applyBtn= document.getElementById("applyBtn");
+          applyBtn.addEventListener("click",function(e){
+              const couponValue=coupon.value;
+              if (couponValue== 'NEW15'){
+                  const discount15= 2200*0.15;
+                  setInnerTextById("discount",discount15);
+                  const finalPrice= 2200-discount15;
+                  setInnerTextById("grandTotal",finalPrice);
+                  coupon.classList.add("hidden");
+                  applyBtn.classList.add("hidden");
+                  discountTr.classList.remove("hidden");
+              }
+              else if(couponValue == 'Couple 20'){
+                  const discount20= 2200*0.20;
+                  setInnerTextById("discount",discount20);
+                  const finalPrice= 2200-discount20;
+                  setInnerTextById("grandTotal",finalPrice);
+                  coupon.classList.add("hidden");
+                  applyBtn.classList.add("hidden");
+                  discountTr.classList.remove("hidden");
+              }
+              else{
+                  alert('Wrong Coupon! Use a valid one.');
+              }
+          })
+      }
+
+  })
+}
+
+// next button functionality 
+
+const phoneNumberInput = document.getElementById("number");
+const nextButton = document.getElementById("nextBtn");
+
+phoneNumberInput.addEventListener("input", function (e) {
+  const phoneNumberValue = phoneNumberInput.value.trim();
+
+  
+  if (phoneNumberValue !== "" && count>0) {
+      nextButton.removeAttribute("disabled");
+  } else {
+      nextButton.setAttribute("disabled", "disabled");
   }
-  availableCountElement.textContent = availableSeats + " Available";
-  selectedCountElement.textContent = selectedSeats + " Selected";
-  seatCountElement.textContent = selectedSeats;
 });
+
+function disableSeats(){
+  for (const seat of allSeats) {
+      seat.setAttribute('disabled', 'disabled');
+}
 }
 
-
-
-
-
-
-
-
-// sum of ticket price 
-
-function updateTotalPrice() {
-  const seatCount = parseInt(document.querySelector('.seat-count').textContent);
-  const seatPrice = 550; // 
-  const totalPrice = seatCount * seatPrice;
-  document.querySelector('.total-price').textContent = totalPrice + ' BDT'; // Removed extra space
-  return totalPrice; 
+function setInnerTextById(elementId, value){
+  document.getElementById(elementId).innerText=value;
 }
 
-updateTotalPrice();
+function handleSeatClick(seatData) {
+  
+  const tableBody =document.getElementsByTagName('tbody')[0];
+  const newRow = tableBody.insertRow();
 
-document.querySelector('.seat-count').addEventListener('DOMSubtreeModified', updateTotalPrice);
+  const cell1 = newRow.insertCell(0);
+  const cell2 = newRow.insertCell(1);
+  const cell3 = newRow.insertCell(2);
 
-document.getElementById('applyCouponBtn').addEventListener('click', function() {
-  const couponInput = document.getElementById('couponInput').value.trim(); 
-  let grandTotal = updateTotalPrice(); 
-  let errorMessage = ''; 
+  cell1.innerText = seatData;
+  cell2.innerText = 'Economy';
+  cell3.innerText = 550;
+} 
 
-  // Applying coupon logic
-  if (couponInput === 'NEW15') {
-      grandTotal *= 0.85; 
-  } else if (couponInput === 'Couple 20') {
-      grandTotal *= 0.80; 
-  } else {
-      errorMessage = 'Invalid coupon code'; 
-  }
 
-  const grandTotalLabel = document.getElementById('grandTotalLabel');
-  const grandTotalValue = document.getElementById('grandTotalValue');
-  if (errorMessage === '') {
-      grandTotalValue.textContent =grandTotal.toFixed(2) + 'BDT ';
-      grandTotalLabel.classList.remove('hidden');
-      grandTotalValue.classList.remove('hidden');
-  } else {
-      grandTotalLabel.classList.add('hidden');
-      grandTotalValue.classList.add('hidden');
-      alert(errorMessage); 
-  }
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('my_modal_4');
+  const continueButton = modal.querySelector('.btn-success');
+  continueButton.addEventListener('click', function () {
+      modal.close();
+      window.scrollTo(0, 0);
+  });
 });
