@@ -22,7 +22,7 @@ let leftSeat=40;
 
 for (const seat of allSeats){
   seat.addEventListener("click",function(e){
-    seat.classList.add('bg-green-500', 'text-white');
+    seat.classList.add('bg-green-400', 'text-white');
       const seatData =seat.innerText;
       count=count+1;
       leftSeat=leftSeat-1;
@@ -114,6 +114,7 @@ function handleSeatClick(seatData) {
 
 document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('my_modal_4');
+
   const continueButton = modal.querySelector('.btn-success');
   continueButton.addEventListener('click', function () {
       modal.close();
