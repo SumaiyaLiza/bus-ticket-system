@@ -1,4 +1,3 @@
-
 const selectedSeats = new Set();
 
 function scrollToMainSection() {
@@ -51,7 +50,7 @@ for (const seat of allSeats) {
     const coupon = document.getElementById("coupon");
     handleSeatClick(seatData);
     if (count > 3) {
-      alert("You have reached the limit!");
+      alert("This Is Your Last Seat For Selection!");
       disableSeats(seat);
       coupon.removeAttribute("disabled");
       const discountTr = document.getElementById("discountTr");
